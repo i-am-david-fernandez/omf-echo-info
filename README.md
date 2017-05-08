@@ -9,6 +9,9 @@
 
 <br/>
 
+## About
+
+This function provides a convenient way to produce coloured terminal messages from scripts. It is intended for use in terminals with a dark-background theme (e.g., white text on black background).
 
 ## Install
 
@@ -20,8 +23,22 @@ $ omf install echo-info
 ## Usage
 
 ```fish
-$ echo-info
+$ echo-info [--major|--minor|--warning|--error] <message>
 ```
+
+The option names suggest their intended use:
+  - major produces bright green text for (good) important information,
+  - minor produces comparatively dull blue text for (good) information of secondary importance,
+  - warning produces comparatively dull yellow text for (bad) information of secondary importance,
+  - error produces bright red text for (bad) critically-important information.
+
+e.g.,
+   echo_info --major "Performing first stage processing of large dataset..."
+   echo_info --minor "  - Doing the first thing..."
+   echo_info --minor "  - Reticulating splines..."
+   echo_info --major "Complete."
+   echo_info --warning "Warning! Probability of failure to reticulate increasing."
+   echo_info --error "Error! Splines not fully reticulated; system unstable, terminal failure imminent!"
 
 
 # License
