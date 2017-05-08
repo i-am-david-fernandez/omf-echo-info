@@ -27,19 +27,21 @@ $ echo-info [--major|--minor|--warning|--error] <message>
 ```
 
 The option names suggest their intended use:
-  - major produces bright green text for (good) important information,
-  - minor produces comparatively dull blue text for (good) information of secondary importance,
-  - warning produces comparatively dull yellow text for (bad) information of secondary importance,
-  - error produces bright red text for (bad) critically-important information.
+  - `major` produces bright green text for (good) important information,
+  - `minor` produces comparatively dull blue text for (good) information of secondary importance,
+  - `warning` produces comparatively dull yellow text for (bad) information of secondary importance,
+  - `error` produces bright red text for (bad) critically-important information.
 
 e.g.,
-   echo_info --major "Performing first stage processing of large dataset..."
-   echo_info --minor "  - Doing the first thing..."
-   echo_info --minor "  - Reticulating splines..."
-   echo_info --major "Complete."
-   echo_info --warning "Warning! Probability of failure to reticulate increasing."
-   echo_info --error "Error! Splines not fully reticulated; system unstable, terminal failure imminent!"
 
+```
+echo-info --major "Performing first stage processing of large dataset..."
+echo-info --minor "  - Doing the first thing..."
+echo-info --minor "  - Reticulating splines..."
+echo-info --major "Complete."
+echo-info --warning "Warning! Probability of failure to reticulate increasing."
+echo-info --error "Error! Splines not fully reticulated; system unstable, terminal failure imminent!"
+```
 
 # License
 
